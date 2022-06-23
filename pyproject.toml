@@ -3,14 +3,19 @@
 name = "challenge-python-v1"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Stefania Stavropoulou <stefstavropoulou@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "*"
 psycopg2 = "*"
+djangorestframework = "^3.13.1"
+drf-spectacular = "^0.22.1"
+django-filter = "^21.1"
 pytest = "*"
-
+Pillow = "9.1.1"
+djangorestframework-simplejwt = "^5.2.0"
+pytest-django = "*"
 
 [build-system]
 requires = ["poetry>=0.12"]

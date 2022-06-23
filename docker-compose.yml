@@ -14,7 +14,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     entrypoint: ""
-    command: "python dinopedia/manage.py runserver 0.0.0.0:8000"
+    #command: "python dinopedia/manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python dinopedia/manage.py makemigrations dinosaurs users && python dinopedia/manage.py migrate && python dinopedia/manage.py runserver 0.0.0.0:8000"
     ports:
       - 8000:8000
     volumes:
@@ -32,3 +33,11 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
+  # pgadmin:
+  #   container_name: pgadmin4
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: dinopedia@mail.com
+  #     PGADMIN_DEFAULT_PASSWORD: dinopedia
+  #   ports:
+  #     - "5050:80"

@@ -1,3 +1,6 @@
 .python-version
 __pycache__/
 *.pyc
+*.pytest_cache
+dinopedia/dinosaurs/migrations
+dinopedia/users/migrations
